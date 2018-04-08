@@ -54,8 +54,8 @@ data_tmp = pd.DataFrame(data_tmp)
 data_tmp.columns = ["id",
                     "gmt_create",
                     "gmt_modified",
-                    "term_id",
-                    "member_id",
+                    "course_id",
+                    "user_id",
                     "test_score",
                     "assignment_score",
                     "exam_score",
@@ -73,4 +73,4 @@ data_tmp.columns = ["id",
                     "time" # I don't know what this is, check w/ admin
                     ]
 
-data_tmp.to_csv("moc_term_grade_summary.csv")
+data_tmp.to_csv("moc_term_grade_summary.csv", encoding = "utf8")

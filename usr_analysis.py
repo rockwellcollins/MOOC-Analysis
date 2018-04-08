@@ -73,7 +73,7 @@ course_id_list = np.unique(data_all["course_id"])
 for course_id in course_id_list:
     data_slice = data_all[data_all["course_id"] == course_id]
     name = "users_of_" + str(course_id) + ".csv"
-    data_slice.to_csv(name)
+    data_slice.to_csv(name,encoding = "utf8")
     
 data_all = data_all.drop_duplicates()
-data_all.to_csv("data_all.csv")
+data_all.to_csv("data_all.csv",encoding = "utf8")
